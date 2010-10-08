@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
+#import "ArcGIS.h"
 
 
-@interface STIMapViewVc : UIViewController 
+@interface STIMapViewVc : UIViewController <AGSMapViewDelegate> 
 {
-	MKMapView *mapView;
+	AGSMapView *mapView; 
 }
 
-@property (nonatomic, retain) MKMapView *mapView;
+@property (nonatomic, retain) IBOutlet AGSMapView *mapView;
 
 @end
